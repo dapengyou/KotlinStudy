@@ -5,6 +5,16 @@ fun main() {
     login("lady_zhou", "1234") { msg: String, code: Int ->
         println("登录结果: msg:$msg,code:$code")
     }
+
+    //lambda 属于函数类型的对象
+    login("lady", "1234", ::methodResponseResult) //在函数前 加上:: 将函数变成函数类型的对象（函数引用）
+    //或者
+    val obj = ::methodResponseResult
+    login("lady", "1234", obj)
+}
+
+fun methodResponseResult(msg: String, code: Int) {
+    println("登录结果: msg:$msg,code:$code")
 }
 
 const val USERNAME = "lady_zhou"
