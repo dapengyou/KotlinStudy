@@ -1,4 +1,4 @@
-package study;
+package study.step1;
 
 public class Test {
     public static void in() {

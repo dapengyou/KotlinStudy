@@ -1,4 +1,4 @@
-package study
+package study.step1
 
 import java.lang.IllegalArgumentException
 import kotlin.Exception
